@@ -7,9 +7,9 @@ Chat Room<br>
 Steps involved in Farming -> Land Preparation, Crop Varieties, Irrigation, Sowing, Manure and Fertilizer, Harvesting<br>
 (The above is for users with an account) <br>
 Explore various crops<br>
-Blogs and News<br><br>
+Blogs and News<br>
 FAQ<br>
 Details about Government Programs (Socio-Economy)<br><br>
 Programming Language: HTML, CSS, PHP<br>
-Data Base: MySQL<br><br>
+Data Base: MySQL<br>
 Server: Xampp Server<br>
