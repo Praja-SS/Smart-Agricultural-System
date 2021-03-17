@@ -1,0 +1,85 @@
+{% load static %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="sidenav1.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Plant Diseases</title>
+  </head>
+   <style>
+
+div.container1 {
+    width:98%; 
+    margin:1%;
+  }
+ 
+  </style>
+  
+  <body>
+    <!-- navbar -->
+  <header>
+    <div class="nav-extended">
+      <nav style="min-height: 100px ">
+        <nav class="nav-wrapper black ">       
+          <a href="#" class="brand-logo green-text"><h4 ><span><pre>                    SMART AGRICULTURE SYSTEM</pre></span></h4></a> 
+          <br><br>
+                 
+        </nav>
+      </nav>
+    </div>
+  </header>
+
+    <div id='name' class='container'>
+      <header>
+          <h3 center><strong>Plant Diseases Recognition</h3>
+		  <br><br>
+           
+      </header>
+        <p></p><center>
+    <form method="post" id="fileform" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="file-upload">
+      <div class="file-select">
+	  <table><th>
+         <td> <div class="file-select-button" id="fileName">Choose File</div></td>
+        
+        <td><input id="chooseFile" type="file" name="myfile"></td></th></table>
+      </div>
+    </div><br><br><center>
+    <button id="sub" class="btn btn-success btn-lg" type="submit" >Predict</button></center>
+  </form>
+
+
+  {% if file_url %}
+  <h1 id='filename'><strong>{{ result }}</h1>
+  <img src="data:image/png;base64,{{file_url}}" style="width:224px;height:224px;">
+  {% endif %}
+	</center>
+    </div><br><br>
+  </body>
+  <footer id="footer" >
+  <footer class="page-footer black ">
+<div class="container">
+  <div class="row">
+    <div class="col  l6 s12  ">
+      <ul >
+        <li><a class="green-text text-lighten-3 text-indent:"-5em";" href="aboutus.php">About us</a></li>
+        <li><a class="green-text text-lighten-3" href="contactus.php">Contact us</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer-copyright green darken-4 ">
+    <div class="container center">Copyright &copy; 2020 Developed By ARES</div>
+  </div>
+</footer> 
+</footer>
+  <script type="text/javascript" src="{% static 'plant_app/jQuery.js' %}"></script>
+  <script type="text/javascript" src="{% static 'plant_app/effect.js' %}"></script>
+</html>
